@@ -1,0 +1,263 @@
+html {
+    height:100%;
+}
+body{
+    height: 100%;
+}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: 0;
+    border: none;
+    text-decoration: none;
+    overflow: hidden;
+}
+
+/*serve per togliere il focus blu*/
+*:focus{
+    outline: none;
+}
+
+/* ### classi generali ###*/
+body::-webkit-scrollbar {
+    width: 0.4em;
+}
+/* ## classi di posizione ## */
+.center{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+.center-2{
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    margin: 0 auto;
+}
+.fixed{
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.right{
+    float: right;
+} 
+.left{
+    float: left;
+}
+.father{
+    position: relative;
+}
+.absolute{
+    position: absolute;
+}
+.fixed{
+    position: fixed;
+}
+.clearfix:after{
+   content: ".";
+   visibility: hidden;
+   display: block;
+   height: 0;
+   clear: both;
+}
+.shadow{
+    box-shadow: 0 4px 5px rgba(0,0,0,.26)!important;
+}
+/* ## status ## */
+.show{
+    display: block;
+}
+.hidden{
+	display: none;
+}
+
+/* ## classi di font ## */
+.font-b{
+    font-family: 'Oswald', sans-serif;
+}
+.font-b-400{
+    font-weight: 400;
+}
+.font-r{
+    font-family: 'Raleway', sans-serif;
+    color: #3c3533;
+}
+.gold{
+    color: #b58018;
+}
+/* ## classi di geometrie ## */
+.circle{
+    /*border: 2px solid #b58018;*/
+    border-radius: 50%;
+    display: block;
+    margin: 0 auto;
+}
+.max{
+    height: 100%;
+    width: 100%;
+}
+
+/* ## classe main ## */
+.main-container{
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+}
+.slideshow-container{
+    width: 750px;
+    padding: 10px 20px;
+    height: 600px;
+    margin: 30px auto;
+}
+.slideshow{
+    height: 75%;
+    width: 100%;
+    padding: 10px 0px;
+}
+.phototumbnails{
+    width: 100%;
+    height: 25%;
+    overflow: initial;
+    box-shadow: inset 0px 0px 10px 6px grey;
+}
+.phototumbnails * {
+    overflow: initial;
+}
+.dx{
+    height: 100%;
+    overflow-y: hidden;
+    white-space: nowrap;
+    width: 100%;
+    overflow-x: scroll;
+    
+}
+.dx img{
+    width: 100%;
+    height: 100%;
+}
+.dx::-webkit-scrollbar-track {
+   padding: 0.5em;
+   border: 1px;
+   background-color: lightgray;
+   border-radius: 4px;
+}
+.dx::-webkit-scrollbar{
+    height: 0.5em;
+    margin: 1px 0px;
+}
+
+.dx::-webkit-scrollbar-corner{
+    border-radius: 4px;
+}
+.dx::-webkit-scrollbar-thumb{
+    background-color: gray;
+    border-radius: 4px;
+    transition: 0.4s;
+}
+.dx::-webkit-scrollbar-thumb:hover{
+    background-color: darkgrey;
+    cursor: pointer;
+}
+.thumb{
+    height: 100%;
+    width: 200px;
+    margin-right: 4px;
+    margin-bottom: 5px;
+    transition: 0.4s;
+    opacity: 0.5;
+    display: inline-block;
+    padding: 2px;
+    padding-bottom: 4px;
+}
+.thumb:hover{
+    cursor: pointer;
+    opacity: initial;
+}
+.thumb-active{
+    opacity: 1;
+    /*box-shadow: 0 2px 5px rgba(0,0,0,.26)!important;*/
+}
+.thumb-active img{
+     box-shadow: 0 2px 5px rgba(0,0,0,.26)!important;
+}
+img{
+    max-width: 100%;
+    max-height: 100%;
+    border-radius: 2px;
+    display: block;
+    margin: 0 auto;
+    image-rendering: auto;
+}
+.slide-icon{
+    display: block;
+    height: 35px;
+    width: 35px; /*24*/
+    z-index: 10;
+    cursor: pointer;
+    opacity: 0.5;
+    transition: 0.3s;
+    color: black;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+.slide-icon:hover{
+    opacity: 1;
+}
+
+.next{
+    background-image: url("../../static/icons/svg/next.svg");
+    position: absolute;
+    top: 50%;
+    right: 10px;
+}
+.back{
+    background-image: url("../../static/icons/svg/back.svg");
+    position: absolute;
+    top: 50%;
+    left: 10px;
+}
+.loading{
+    display: block;
+    margin: 0 auto;
+}
+.loading p{
+    text-align: center;
+}
+#load-gif{
+    width: 100px;
+    height: 100px;
+}
+
+.prove-foto{
+    width: 500px;
+    height: 500px;
+    background-image: url("../../static/images/3.jpg");
+}
+@media screen and (max-width: 771px){
+
+    .main-container{
+        margin-top: 55px;
+    }
+    #photos{
+        width: 200px;
+    }
+    .slideshow-container{
+        width: 100%;
+    }
+    .slideshow{
+        height: 50%;
+    }
+    .phototumbnails{
+        height: 15%;
+    }
+    .thumb{
+        width: 125px;
+    }
+}

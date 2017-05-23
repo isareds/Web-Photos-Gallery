@@ -14,5 +14,5 @@ It's a simple web gallery written in HTML, CSS and JQuery
 
 ### TODO
 
-1. Dinamically update the number of the photo
-1. Avoid the numerical order naming of the image
+1. Dinamically update the number of the photos
+1. Avoid the numerical order naming constrain for the images
